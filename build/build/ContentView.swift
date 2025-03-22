@@ -39,6 +39,8 @@ class Checklist: ObservableObject {
 
 
 struct ContentView: View {
+    @State private var isRecording = false
+
     @StateObject private var checklist = Checklist()
     
     @State private var input: String = ""
@@ -93,18 +95,39 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 /*Button(action: checklist.importItems) {
-                    Text("Import")
-                        .padding()
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
+                 Text("Import")
+                 .padding()
+                 .background(Color.green)
+                 .foregroundColor(.white)
+                 .cornerRadius(10)
+                 }
                  */
             }
+            VStack(spacing: 20) {
+                Text("Microphone Audio Capture")
+                    .font(.title)
+                
+                Button(action: {
+                    if isRecording {
+                        MicrophoneAudioCapture.shared.stopCapturing()
+                    } else {
+                        MicrophoneAudioCapture.shared.startCapturing()
+                    }
+                    isRecording.toggle()
+                }) {
+                    Text(isRecording ? "Stop Recording" : "Start Recording")
+                        .padding()
+                }
+                
+                Button("Play Recording") {
+                    MicrophoneAudioCapture.shared.playRecording()
+                }
+                .padding()
+            }
+            .padding()
         }
-        .padding()
+        
     }
-    
     func addNewItem() {
         let newItem = ChecklistItem(title: input, isChecked: false)
         checklist.addItem(newItem: newItem)
@@ -117,7 +140,7 @@ struct ContentView: View {
         }
     }
     
-
+    
     
     func delete(at offsets: IndexSet) {
         checklist.items.remove(atOffsets: offsets)

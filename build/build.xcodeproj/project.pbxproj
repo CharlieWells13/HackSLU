@@ -21,12 +21,29 @@
 			remoteGlobalIDString = BE45DA302D8F1E2600AD68DA;
 			remoteInfo = build;
 		};
+		BE45DA7A2D8F45F300AD68DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE45DA292D8F1E2600AD68DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE45DA682D8F45F100AD68DA;
+			remoteInfo = MyMacAudioApp;
+		};
+		BE45DA842D8F45F300AD68DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE45DA292D8F1E2600AD68DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE45DA682D8F45F100AD68DA;
+			remoteInfo = MyMacAudioApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BE45DA312D8F1E2600AD68DA /* build.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = build.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE45DA412D8F1E2700AD68DA /* buildTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = buildTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE45DA4B2D8F1E2800AD68DA /* buildUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = buildUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE45DA692D8F45F100AD68DA /* MyMacAudioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacAudioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE45DA792D8F45F300AD68DA /* MyMacAudioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMacAudioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE45DA832D8F45F300AD68DA /* MyMacAudioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMacAudioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +86,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE45DA662D8F45F100AD68DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA762D8F45F300AD68DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA802D8F45F300AD68DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +126,9 @@
 				BE45DA312D8F1E2600AD68DA /* build.app */,
 				BE45DA412D8F1E2700AD68DA /* buildTests.xctest */,
 				BE45DA4B2D8F1E2800AD68DA /* buildUITests.xctest */,
+				BE45DA692D8F45F100AD68DA /* MyMacAudioApp.app */,
+				BE45DA792D8F45F300AD68DA /* MyMacAudioAppTests.xctest */,
+				BE45DA832D8F45F300AD68DA /* MyMacAudioAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +204,65 @@
 			productReference = BE45DA4B2D8F1E2800AD68DA /* buildUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BE45DA682D8F45F100AD68DA /* MyMacAudioApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE45DA8B2D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioApp" */;
+			buildPhases = (
+				BE45DA652D8F45F100AD68DA /* Sources */,
+				BE45DA662D8F45F100AD68DA /* Frameworks */,
+				BE45DA672D8F45F100AD68DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyMacAudioApp;
+			packageProductDependencies = (
+			);
+			productName = MyMacAudioApp;
+			productReference = BE45DA692D8F45F100AD68DA /* MyMacAudioApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE45DA782D8F45F300AD68DA /* MyMacAudioAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE45DA8E2D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioAppTests" */;
+			buildPhases = (
+				BE45DA752D8F45F300AD68DA /* Sources */,
+				BE45DA762D8F45F300AD68DA /* Frameworks */,
+				BE45DA772D8F45F300AD68DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE45DA7B2D8F45F300AD68DA /* PBXTargetDependency */,
+			);
+			name = MyMacAudioAppTests;
+			packageProductDependencies = (
+			);
+			productName = MyMacAudioAppTests;
+			productReference = BE45DA792D8F45F300AD68DA /* MyMacAudioAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE45DA822D8F45F300AD68DA /* MyMacAudioAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE45DA912D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioAppUITests" */;
+			buildPhases = (
+				BE45DA7F2D8F45F300AD68DA /* Sources */,
+				BE45DA802D8F45F300AD68DA /* Frameworks */,
+				BE45DA812D8F45F300AD68DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE45DA852D8F45F300AD68DA /* PBXTargetDependency */,
+			);
+			name = MyMacAudioAppUITests;
+			packageProductDependencies = (
+			);
+			productName = MyMacAudioAppUITests;
+			productReference = BE45DA832D8F45F300AD68DA /* MyMacAudioAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +284,17 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = BE45DA302D8F1E2600AD68DA;
 					};
+					BE45DA682D8F45F100AD68DA = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					BE45DA782D8F45F300AD68DA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BE45DA682D8F45F100AD68DA;
+					};
+					BE45DA822D8F45F300AD68DA = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = BE45DA682D8F45F100AD68DA;
+					};
 				};
 			};
 			buildConfigurationList = BE45DA2C2D8F1E2600AD68DA /* Build configuration list for PBXProject "build" */;
@@ -203,6 +314,9 @@
 				BE45DA302D8F1E2600AD68DA /* build */,
 				BE45DA402D8F1E2700AD68DA /* buildTests */,
 				BE45DA4A2D8F1E2800AD68DA /* buildUITests */,
+				BE45DA682D8F45F100AD68DA /* MyMacAudioApp */,
+				BE45DA782D8F45F300AD68DA /* MyMacAudioAppTests */,
+				BE45DA822D8F45F300AD68DA /* MyMacAudioAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +337,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BE45DA492D8F1E2800AD68DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA672D8F45F100AD68DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA772D8F45F300AD68DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA812D8F45F300AD68DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +388,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE45DA652D8F45F100AD68DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA752D8F45F300AD68DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE45DA7F2D8F45F300AD68DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +421,16 @@
 			isa = PBXTargetDependency;
 			target = BE45DA302D8F1E2600AD68DA /* build */;
 			targetProxy = BE45DA4C2D8F1E2800AD68DA /* PBXContainerItemProxy */;
+		};
+		BE45DA7B2D8F45F300AD68DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE45DA682D8F45F100AD68DA /* MyMacAudioApp */;
+			targetProxy = BE45DA7A2D8F45F300AD68DA /* PBXContainerItemProxy */;
+		};
+		BE45DA852D8F45F300AD68DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE45DA682D8F45F100AD68DA /* MyMacAudioApp */;
+			targetProxy = BE45DA842D8F45F300AD68DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,6 +684,138 @@
 			};
 			name = Release;
 		};
+		BE45DA8C2D8F45F300AD68DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyMacAudioApp/MyMacAudioApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyMacAudioApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BE45DA8D2D8F45F300AD68DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MyMacAudioApp/MyMacAudioApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MyMacAudioApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BE45DA8F2D8F45F300AD68DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMacAudioApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyMacAudioApp";
+			};
+			name = Debug;
+		};
+		BE45DA902D8F45F300AD68DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMacAudioApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyMacAudioApp";
+			};
+			name = Release;
+		};
+		BE45DA922D8F45F300AD68DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MyMacAudioApp;
+			};
+			name = Debug;
+		};
+		BE45DA932D8F45F300AD68DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2WAZR6HCN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = slu.MyMacAudioAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = MyMacAudioApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +851,33 @@
 			buildConfigurations = (
 				BE45DA5C2D8F1E2800AD68DA /* Debug */,
 				BE45DA5D2D8F1E2800AD68DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE45DA8B2D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE45DA8C2D8F45F300AD68DA /* Debug */,
+				BE45DA8D2D8F45F300AD68DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE45DA8E2D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE45DA8F2D8F45F300AD68DA /* Debug */,
+				BE45DA902D8F45F300AD68DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE45DA912D8F45F300AD68DA /* Build configuration list for PBXNativeTarget "MyMacAudioAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE45DA922D8F45F300AD68DA /* Debug */,
+				BE45DA932D8F45F300AD68DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

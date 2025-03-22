@@ -1,14 +1,19 @@
-//
-//  buildApp.swift
-//  build
-//
-//  Created by William Phoenix on 3/22/25.
-//
-
 import SwiftUI
+import AVFoundation
 
 @main
-struct buildApp: App {
+struct YourAppName: App {
+    init() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playAndRecord, mode: .default, options: [])
+            try audioSession.setActive(true)
+            print("Audio session activated with sample rate: \(audioSession.sampleRate)")
+        } catch {
+            print("Error configuring audio session: \(error)")
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
