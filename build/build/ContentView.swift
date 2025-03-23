@@ -1,19 +1,33 @@
 import SwiftUI
 
 
-struct ChecklistItem {
+struct ChecklistItem: Codable, Identifiable{
+    var id = UUID()
     var title: String
     var isChecked: Bool
+    var hasTime: Bool
+    var time: Date?
     
-    init(title: String, isChecked: Bool) {
+    init(title: String, isChecked: Bool, time: Date? = nil, hasTime: Bool) {
         self.title = title
         self.isChecked = isChecked
+        self.time = time
+        self.hasTime = hasTime
     }
 }
 
-
 class Checklist: ObservableObject {
-    @Published var items: [ChecklistItem] = []
+    @Published var items: [ChecklistItem] = []{
+        didSet{
+            saveItems()
+        }
+    }
+    
+    private let storageKey = "ChecklistItems"
+    
+    init(){
+        loadItems()
+    }
     
     func addItem(newItem: ChecklistItem) {
         items.append(newItem)
@@ -35,6 +49,19 @@ class Checklist: ObservableObject {
         }
     }
     
+    func saveItems(){
+        if let encoded = try? JSONEncoder().encode(items) {
+                UserDefaults.standard.set(encoded, forKey: storageKey)
+        }
+    }
+    
+    func loadItems() {
+        if let savedData = UserDefaults.standard.data(forKey: storageKey),
+           let decodedItems = try? JSONDecoder().decode([ChecklistItem].self, from: savedData) {
+            items = decodedItems
+        }
+    }
+    
 }
 
 
@@ -44,6 +71,11 @@ struct ContentView: View {
     @StateObject private var checklist = Checklist()
     
     @State private var input: String = ""
+    
+    @State private var selectedDate: Date = Date()
+    
+    @State private var isTimed: Bool = false
+
 
     var body: some View {
         VStack {
@@ -56,6 +88,17 @@ struct ContentView: View {
                 ForEach(checklist.items, id: \.title) { item in
                     HStack {
                         Text(item.title)
+                        Spacer()
+                        if item.hasTime, let time = item.time {
+                            Text("Due: \(time, formatter: dateFormatter)")
+                                .font(.subheadline)
+                                .foregroundColor(time < Date() ? .red : .gray)  // Change color based on comparison
+                        }
+                        else {
+                            Text("") // Empty text if time is nil
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
                         Spacer()
                         Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
                             .foregroundColor(item.isChecked ? .green : .gray)
@@ -77,6 +120,18 @@ struct ContentView: View {
                 .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 1))
                 .shadow(color: .gray.opacity(0.3), radius: 3, x: 0, y: 2)
                 .padding(.horizontal)
+            
+            HStack {
+                Text("Timed Item?")
+                Toggle("", isOn: $isTimed)
+                    .labelsHidden()
+            }
+                        
+    
+            if isTimed {
+                DatePicker("Select Time", selection: $selectedDate)
+            }
+            
             
             HStack{
                 
@@ -129,7 +184,7 @@ struct ContentView: View {
         
     }
     func addNewItem() {
-        let newItem = ChecklistItem(title: input, isChecked: false)
+        let newItem = ChecklistItem(title: input, isChecked: false, time: selectedDate == Date() ? nil : selectedDate, hasTime: isTimed)
         checklist.addItem(newItem: newItem)
         input = ""
     }
@@ -140,11 +195,16 @@ struct ContentView: View {
         }
     }
     
-    
-    
     func delete(at offsets: IndexSet) {
         checklist.items.remove(atOffsets: offsets)
     }
+    
+    private var dateFormatter: DateFormatter {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .short
+            formatter.timeStyle = .short
+            return formatter
+        }
 }
 
 #Preview {
